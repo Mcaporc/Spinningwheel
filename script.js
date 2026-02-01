@@ -1,6 +1,7 @@
 let btn = document.getElementById("bouton");
 let roue = document.getElementById("roue");
 let troll = document.getElementById("gorilla")
+let son = document.getElementById("son")
 let spinning = false; // empêche de cliquer pendant la rotation
 let currentRotation = 0; // mémorise la rotation précédente
 
@@ -19,5 +20,6 @@ btn.addEventListener("click", () => {
   setTimeout(() => {
     spinning = false;
     troll.style.display = "block";
+    son.play();
   }, 6000);
 });
