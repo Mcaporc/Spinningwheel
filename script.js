@@ -8,6 +8,8 @@ let currentRotation = 0; // mémorise la rotation précédente
 btn.addEventListener("click", () => {
   if (spinning) return; // ignore les clics pendant la rotation
   spinning = true;
+  son.currentTime = 0;
+  son.play();
 
   // Choisis un nombre de tours + un angle aléatoire
   let tours = Math.floor(Math.random() * 3) + 3; // 3 à 5 tours
@@ -20,6 +22,5 @@ btn.addEventListener("click", () => {
   setTimeout(() => {
     spinning = false;
     troll.style.display = "block";
-    son.play();
   }, 6000);
 });
